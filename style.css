@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999; /* garante que fique acima dos outros elementos */
+}
+
+header nav {
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    display: flex;
+    flex: auto;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 17px 40px;
+    align-items: center;
+}
+
+header nav h1 {
+    color: white;
+    font-size: 20px;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header nav ul li {
+    padding: 12px;
+    margin: 0px 30px;
+    color: white;
+    cursor: pointer;
+}
+
+header nav ul li {
+  position: relative;
+  padding: 12px;
+  color: white;
+  cursor: pointer;
+  font-family: "Orbitron", sans-serif;
+  display: inline-block;
+}
+
+header nav ul li::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  transition: transform 0.3s ease;
+}
+
+header nav ul li:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+#landing-page {
+    height: 100vh;
+    width: 100%;
+    background-image: url('image-bank/jungle.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding-left: 100px
+}
+
+#call-to-action {
+    color: white;
+    font-family: "Orbitron", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+}
+
+#call-to-action h1 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+#call-to-action h2 {
+    font-size: 17px;
+    margin-bottom: 30px;
+}
